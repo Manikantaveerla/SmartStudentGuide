@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStudentGuide - Resumes, Projects, Editing & More</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%234f46e5' d='M496 128v112c0 26.5-21.5 48-48 48H64c-26.5 0-48-21.5-48-48V128l224 96 224-96zM256 320l-224-96v128c0 53 112 96 224 96s224-43 224-96V224L256 320z'/></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(86, 80, 203, 0.9), rgba(121, 143, 222, 0.85)), url('https://placehold.co/1200x800/e2e8f0/e2e8f0?text=');
+            background-size: cover;
+            background-position: center;
+        }
+        .active-tab {
+            border-bottom: 2px solid #4f46e5; /* indigo-600 */
+            color: #4f46e5;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center text-2xl font-bold text-indigo-600">
+                <i class="fas fa-graduation-cap text-3xl text-indigo-500 mr-2"></i>
+                <span>SmartStudentGuide</span>
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#services" class="text-slate-600 hover:text-indigo-600">Services</a>
+                <a href="#pricing" class="text-slate-600 hover:text-indigo-600">Pricing</a>
+                <a href="#testimonials" class="text-slate-600 hover:text-indigo-600">Testimonials</a>
+                <a href="#faq" class="text-slate-600 hover:text-indigo-600">FAQ</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#services" class="block py-2 px-4 text-sm text-slate-600 hover:bg-indigo-50">Services</a>
+            <a href="#pricing" class="block py-2 px-4 text-sm text-slate-600 hover:bg-indigo-50">Pricing</a>
+            <a href="#testimonials" class="block py-2 px-4 text-sm text-slate-600 hover:bg-indigo-50">Testimonials</a>
+            <a href="#faq" class="block py-2 px-4 text-sm text-slate-600 hover:bg-indigo-50">FAQ</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-slate-600 hover:bg-indigo-50">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-20 sm:py-24 text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">Your One-Stop Solution for Academic Success</h1>
+                <p class="mt-4 text-lg sm:text-xl max-w-3xl mx-auto text-indigo-100">From professional resumes and project assistance to document editing and deployment, we provide the tools you need to excel.</p>
+                <a href="#pricing" class="mt-8 inline-block bg-white text-indigo-700 font-bold px-6 py-3 sm:px-8 sm:py-4 rounded-lg hover:bg-slate-100 transition duration-300 shadow-xl text-base sm:text-lg">See Our Services</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">What We Offer</h2>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">A wide range of services tailored to meet the unique needs of students and freshers.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+                    <!-- Service Card 1: Resume Making -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4"><i class="fas fa-file-alt text-4xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Resume Building</h3>
+                        <p class="text-slate-600">Craft a standout resume that gets you noticed by recruiters.</p>
+                    </div>
+                    <!-- Service Card 2: PDF Editing -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4"><i class="fas fa-file-pdf text-4xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Doc/PDF Editing</h3>
+                        <p class="text-slate-600">Professional editing and formatting for your documents and PDFs.</p>
+                    </div>
+                    <!-- Service Card 3: Project Building -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4"><i class="fas fa-project-diagram text-4xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Custom Projects</h3>
+                        <p class="text-slate-600">From CSP to full websites, we build projects to your requirements.</p>
+                    </div>
+                    <!-- Service Card 4: PPTs -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4"><i class="fas fa-file-powerpoint text-4xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">PPT Presentations</h3>
+                        <p class="text-slate-600">Engaging and professional presentations for your classes and seminars.</p>
+                    </div>
+                     <!-- Service Card 5: Project Docs -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4"><i class="fas fa-book text-4xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Project Documentation</h3>
+                        <p class="text-slate-600">Detailed and well-structured documentation for your projects.</p>
+                    </div>
+                    <!-- Service Card 6: Logo Design -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4"><i class="fas fa-drafting-compass text-4xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Logo & Branding</h3>
+                        <p class="text-slate-600">Create a unique brand identity with a custom logo and branding guide.</p>
+                    </div>
+                    <!-- Service Card 7: Internships -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4"><i class="fas fa-briefcase text-4xl"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Internship Prep</h3>
+                        <p class="text-slate-600">Get ready for your career with our resume, cover letter, and interview preparation services.</p>
+                    </div>
+                    <!-- Service Card 8: GitHub Management -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4">
+                            <i class="fab fa-github text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">GitHub Management</h3>
+                        <p class="text-slate-600">Setup and manage your code repositories professionally to showcase your skills.</p>
+                    </div>
+                    <!-- Service Card 9: Project Deployment -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4">
+                            <i class="fas fa-rocket text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Project Deployment</h3>
+                        <p class="text-slate-600">Take your project live! We handle server setup, configuration, and deployment.</p>
+                    </div>
+                    <!-- Service Card 10: Personal Portfolios -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-500 mb-4">
+                            <i class="fas fa-address-card text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Personal Portfolios</h3>
+                        <p class="text-slate-600">Showcase your skills with a stunning personal portfolio website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-choose-us" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Why Choose SmartStudentGuide?</h2>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">We are committed to helping you succeed with our reliable and professional services.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                        <div class="text-indigo-500 mb-4 text-4xl"><i class="fas fa-check-double"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Expert Quality</h3>
+                        <p class="text-slate-600">Our experienced team ensures top-notch quality for every service we deliver.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                        <div class="text-indigo-500 mb-4 text-4xl"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Affordable Prices</h3>
+                        <p class="text-slate-600">We offer student-friendly pricing without compromising on quality.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                        <div class="text-indigo-500 mb-4 text-4xl"><i class="fas fa-shipping-fast"></i></div>
+                        <h3 class="text-xl font-bold mb-2">On-Time Delivery</h3>
+                        <p class="text-slate-600">We respect your deadlines and guarantee timely delivery of all your work.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                        <div class="text-indigo-500 mb-4 text-4xl"><i class="fas fa-headset"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Dedicated Support</h3>
+                        <p class="text-slate-600">Get instant support and clear communication directly via WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">How It Works</h2>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">A simple, streamlined process to get your work done.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold">1</div>
+                        <h3 class="text-xl font-bold mt-6 mb-2">Select Your Service</h3>
+                        <p class="text-slate-600">Choose from our wide range of services and click 'Order Now'.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold">2</div>
+                        <h3 class="text-xl font-bold mt-6 mb-2">Make Payment</h3>
+                        <p class="text-slate-600">Complete the payment via UPI or Bank Transfer and upload a screenshot.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold">3</div>
+                        <h3 class="text-xl font-bold mt-6 mb-2">Chat on WhatsApp</h3>
+                        <p class="text-slate-600">Contact us on the provided WhatsApp number with your requirements and payment proof.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Samples Section -->
+        <section id="work-samples" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Explore Our Work</h2>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Take a look at the quality and variety of work we deliver to our students.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Sample Card 1: Resume -->
+                    <div class="sample-card group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-64" data-gallery="resume">
+                        <img src="/images/g2.png" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ffffff/1e293b?text=Professional+Resume';" 
+                             alt="Resume Sample" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white p-4">
+                                <h3 class="text-2xl font-bold">Professional Resume</h3>
+                                <p class="mt-2 text-sm">Click to view samples</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sample Card 2: Personal Portfolio -->
+                    <div class="sample-card group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-64" data-gallery="portfolio">
+                        <img src="/images/Gemini_Generated_Image_rz7huzrz7huzrz7h.png" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ffffff/4f46e5?text=Portfolio+Website';" 
+                             alt="Portfolio Sample" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white p-4">
+                                <h3 class="text-2xl font-bold">Personal Portfolio</h3>
+                                <p class="mt-2 text-sm">Click to view samples</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sample Card 3: PPT Presentation -->
+                    <div class="sample-card group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-64" data-gallery="ppt">
+                        <img src="/images/Gemini_Generated_Image_2ffoyk2ffoyk2ffo.png" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ffffff/d97706?text=Engaging+Presentation';" 
+                             alt="PPT Sample" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white p-4">
+                                <h3 class="text-2xl font-bold">PPT Presentation</h3>
+                                <p class="mt-2 text-sm">Click to view samples</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sample Card 4: Project Documentation -->
+                    <div class="sample-card group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-64" data-gallery="doc">
+                        <img src="/images/logo.png" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ffffff/166534?text=Technical+Documentation';" 
+                             alt="Documentation Sample" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white p-4">
+                                <h3 class="text-2xl font-bold">Project Documentation</h3>
+                                <p class="mt-2 text-sm">Click to view samples</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sample Card 5: Logo Design -->
+                    <div class="sample-card group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-64" data-gallery="logo">
+                        <img src="/images/G1.png" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ffffff/0d9488?text=Creative+Logo+Concepts';" 
+                             alt="Logo Sample" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white p-4">
+                                <h3 class="text-2xl font-bold">Logo Design</h3>
+                                <p class="mt-2 text-sm">Click to view samples</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sample Card 6: Custom Project -->
+                    <div class="sample-card group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-64" data-gallery="project">
+                        <img src="/images/robo.png" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/ffffff/be185d?text=Custom+Web+App';" 
+                             alt="Custom Project Sample" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white p-4">
+                                <h3 class="text-2xl font-bold">Custom Project</h3>
+                                <p class="mt-2 text-sm">Click to view samples</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Affordable Pricing</h2>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Transparent and student-friendly pricing with amazing limited-time offers.</p>
+                </div>
+                <!-- Flash Sale Pricing Row -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Pricing Card 1: Resume Building -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-indigo-500 relative overflow-hidden">
+                        <div class="absolute top-4 -right-10 bg-yellow-400 text-yellow-900 text-sm font-bold px-10 py-1 transform rotate-45">FLASH SALE</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">Resume Building</h3>
+                        <p class="text-center text-slate-600 mb-6">ATS-Friendly Resumes</p>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                             <p class="text-4xl sm:text-5xl font-bold text-center text-indigo-600">₹49</p>
+                             <p class="text-lg sm:text-xl font-medium text-slate-400 line-through">₹499</p>
+                        </div>
+                        <p class="text-center text-sm font-semibold text-red-500 mb-6">Offer valid today only!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>1 Professional Resume</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Multiple Revisions</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>PDF & Docx Format</li>
+                        </ul>
+                        <button class="order-btn w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition duration-300">Order Now</button>
+                    </div>
+                    <!-- Pricing Card 2: Doc/PDF Editing -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-purple-500 relative overflow-hidden">
+                        <div class="absolute top-4 -right-10 bg-yellow-400 text-yellow-900 text-sm font-bold px-10 py-1 transform rotate-45">FLASH SALE</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">Doc/PDF Editing</h3>
+                        <p class="text-center text-slate-600 mb-6">Formatting & Proofreading</p>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                            <p class="text-4xl sm:text-5xl font-bold text-center text-purple-600">₹49</p>
+                            <p class="text-lg sm:text-xl font-medium text-slate-400 line-through">₹299</p>
+                        </div>
+                         <p class="text-center text-sm font-semibold text-red-500 mb-6">Offer valid today only!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Up to 10 Pages</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Content Formatting</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Quick Turnaround</li>
+                        </ul>
+                        <button class="order-btn w-full bg-purple-600 text-white font-bold py-3 rounded-lg hover:bg-purple-700 transition duration-300">Order Now</button>
+                    </div>
+                    <!-- Pricing Card 4: PPT Presentations -->
+                     <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-orange-500 relative overflow-hidden">
+                        <div class="absolute top-4 -right-10 bg-yellow-400 text-yellow-900 text-sm font-bold px-10 py-1 transform rotate-45">FLASH SALE</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">PPT Presentations</h3>
+                        <p class="text-center text-slate-600 mb-6">Professional Slides</p>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                             <p class="text-4xl sm:text-5xl font-bold text-center text-orange-600">₹49</p>
+                             <p class="text-lg sm:text-xl font-medium text-slate-400 line-through">₹399</p>
+                        </div>
+                        <p class="text-center text-sm font-semibold text-red-500 mb-6">Offer valid today only!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Up to 15 Slides</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Custom Design</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Infographics & Charts</li>
+                        </ul>
+                        <button class="order-btn w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 transition duration-300">Order Now</button>
+                    </div>
+                    <!-- Pricing Card 5: Logo Design -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-teal-500 relative overflow-hidden">
+                        <div class="absolute top-4 -right-10 bg-yellow-400 text-yellow-900 text-sm font-bold px-10 py-1 transform rotate-45">FLASH SALE</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">Logo Design</h3>
+                        <p class="text-center text-slate-600 mb-6">For Your Personal Brand</p>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                            <p class="text-4xl sm:text-5xl font-bold text-center text-teal-600">₹199</p>
+                            <p class="text-lg sm:text-xl font-medium text-slate-400 line-through">₹999</p>
+                        </div>
+                        <p class="text-center text-sm font-semibold text-red-500 mb-6">Offer valid today only!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>2 Logo Concepts</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>High-Resolution Files</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Vector Source File</li>
+                        </ul>
+                        <button class="order-btn w-full bg-teal-600 text-white font-bold py-3 rounded-lg hover:bg-teal-700 transition duration-300">Order Now</button>
+                    </div>
+                     <!-- Pricing Card 6: Internship Prep -->
+                     <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-teal-500 relative overflow-hidden">
+                        <div class="absolute top-4 -right-10 bg-yellow-400 text-yellow-900 text-sm font-bold px-10 py-1 transform rotate-45">FLASH SALE</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">Internship Prep</h3>
+                        <p class="text-center text-slate-600 mb-6">Complete Package</p>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                             <p class="text-4xl sm:text-5xl font-bold text-center text-teal-600">₹199</p>
+                             <p class="text-lg sm:text-xl font-medium text-slate-400 line-through">₹1999</p>
+                        </div>
+                        <p class="text-center text-sm font-semibold text-red-500 mb-6">Offer valid today only!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Resume Building</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Cover Letter Writing</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Mock Interview Session</li>
+                        </ul>
+                        <button class="order-btn w-full bg-teal-600 text-white font-bold py-3 rounded-lg hover:bg-teal-700 transition duration-300">Order Now</button>
+                    </div>
+                    <!-- Pricing Card: Project Documentation -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-green-500 relative overflow-hidden">
+                        <div class="absolute top-4 -right-10 bg-yellow-400 text-yellow-900 text-sm font-bold px-10 py-1 transform rotate-45">FLASH SALE</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">Project Documentation</h3>
+                        <p class="text-center text-slate-600 mb-6">Reports, Manuals & More</p>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                             <p class="text-4xl sm:text-5xl font-bold text-center text-green-600">₹99</p>
+                             <p class="text-lg sm:text-xl font-medium text-slate-400 line-through">₹499</p>
+                        </div>
+                        <p class="text-center text-sm font-semibold text-red-500 mb-6">Offer valid today only!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Comprehensive Reports</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Proper Formatting</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Diagrams & Charts</li>
+                        </ul>
+                        <button class="order-btn w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition duration-300">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Custom Quote Services -->
+                <div class="text-center mt-20 mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Custom & Advanced Services</h2>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">For projects that need a special touch. Contact us for a personalized quote.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+                     <!-- Pricing Card 3: Custom Projects -->
+                     <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-pink-500 h-full flex flex-col">
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">Custom Projects</h3>
+                        <p class="text-center text-slate-600 mb-6">Websites, Scripts & More</p>
+                        <p class="text-3xl font-bold text-center mb-6">Custom Quote</p>
+                        <p class="text-center text-green-600 font-semibold -mt-4 mb-6">Free Consultation!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Tailored to Requirements</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>All Technologies</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Source Code Included</li>
+                        </ul>
+                        <a href="https://wa.me/919573357376?text=Hello!%20I'd%20like%20to%20request%20a%20quote%20for%20a%20Custom%20Project." target="_blank" class="w-full text-center bg-pink-600 text-white font-bold py-3 rounded-lg hover:bg-pink-700 transition duration-300">Request a Quote</a>
+                    </div>
+                    <!-- Pricing Card 7: GitHub Management -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-gray-800 h-full flex flex-col">
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">GitHub Management</h3>
+                        <p class="text-center text-slate-600 mb-6">Clean & Professional Repos</p>
+                        <p class="text-3xl font-bold text-center mb-6">Custom Quote</p>
+                        <p class="text-center text-green-600 font-semibold -mt-4 mb-6">First-time User Offer!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Professional README</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Branching Strategy</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Showcase Your Code</li>
+                        </ul>
+                        <a href="https://wa.me/919573357376?text=Hello!%20I'd%20like%20to%20request%20a%20quote%20for%20GitHub%20Management." target="_blank" class="w-full text-center bg-gray-800 text-white font-bold py-3 rounded-lg hover:bg-gray-900 transition duration-300">Request a Quote</a>
+                    </div>
+                    <!-- Pricing Card 8: Project Deployment -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-sky-500 h-full flex flex-col">
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">Project Deployment</h3>
+                        <p class="text-center text-slate-600 mb-6">Go Live With Your App</p>
+                        <p class="text-3xl font-bold text-center mb-6">Custom Quote</p>
+                         <p class="text-center text-green-600 font-semibold -mt-4 mb-6">First-time User Offer!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Server Configuration</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Domain & SSL Setup</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Live Hosting Support</li>
+                        </ul>
+                        <a href="https://wa.me/919573357376?text=Hello!%20I'd%20like%20to%20request%20a%20quote%20for%20Project%20Deployment." target="_blank" class="w-full text-center bg-sky-600 text-white font-bold py-3 rounded-lg hover:bg-sky-700 transition duration-300">Request a Quote</a>
+                    </div>
+                     <!-- Pricing Card 9: Personal Portfolios -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-yellow-500 h-full flex flex-col">
+                        <h3 class="text-xl sm:text-2xl font-bold text-center mb-2">Personal Portfolios</h3>
+                        <p class="text-center text-slate-600 mb-6">Your Online Showcase</p>
+                        <p class="text-3xl font-bold text-center mb-6">Custom Quote</p>
+                         <p class="text-center text-green-600 font-semibold -mt-4 mb-6">First-time User Offer!</p>
+                        <ul class="space-y-4 text-slate-600 mb-8 flex-grow">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Modern & Custom Design</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Mobile Responsive</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Contact Form & SEO</li>
+                        </ul>
+                        <a href="https://wa.me/919573357376?text=Hello!%20I'd%20like%20to%20request%20a%20quote%20for%20a%20Personal%20Portfolio." target="_blank" class="w-full text-center bg-yellow-600 text-white font-bold py-3 rounded-lg hover:bg-yellow-700 transition duration-300">Request a Quote</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">What Our Users Say</h2>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Real feedback from students we've helped.</p>
+                </div>
+                <div id="testimonials-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonials will be dynamically inserted here -->
+                </div>
+                <div class="text-center mt-12">
+                    <button id="view-more-reviews-btn" class="hidden bg-slate-200 text-slate-800 font-bold px-6 py-3 rounded-lg hover:bg-slate-300 transition duration-300">
+                        View More Reviews
+                    </button>
+                </div>
+                <div class="text-center mt-12">
+                    <h3 class="text-xl font-bold text-slate-800">Used our services?</h3>
+                    <p class="mt-2 text-slate-600">We'd love to hear your feedback!</p>
+                    <button id="leave-review-btn" class="mt-4 inline-block bg-indigo-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300">
+                        Leave a Review
+                    </button>
+                    <div id="review-form-container" class="hidden mt-6 max-w-xl mx-auto text-left">
+                        <form id="review-form" class="bg-white p-6 rounded-lg shadow-md border">
+                            <div id="review-success-message" class="hidden mb-4 p-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
+                                Thank you for your feedback! It has been submitted and is now live on our site.
+                            </div>
+                             <div id="review-failed-message" class="hidden mb-4 p-4 text-sm text-red-700 bg-red-100 rounded-lg" role="alert">
+                                Verification failed. Please upload a valid payment screenshot to submit your review.
+                            </div>
+                            <div class="mb-4">
+                                <label for="reviewer-name" class="block text-sm font-medium text-slate-700">Your Name</label>
+                                <input type="text" id="reviewer-name" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="reviewer-course" class="block text-sm font-medium text-slate-700">Your Course / Field of Study</label>
+                                <input type="text" id="reviewer-course" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="reviewer-feedback" class="block text-sm font-medium text-slate-700">Your Feedback</label>
+                                <textarea id="reviewer-feedback" rows="4" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required></textarea>
+                            </div>
+                             <div class="mt-4">
+                                <label for="review-screenshot-upload" class="block text-sm font-medium text-slate-700">Upload Payment Screenshot (Required)</label>
+                                <div class="mt-2 flex items-center space-x-4 p-2 border-2 border-slate-300 border-dashed rounded-md">
+                                    <label for="review-screenshot-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500">
+                                        <span>Upload file</span>
+                                        <input id="review-screenshot-upload" name="review-screenshot-upload" type="file" class="sr-only" accept="image/png, image/jpeg, image/jpg">
+                                    </label>
+                                    <p id="review-file-name" class="text-xs text-slate-500">No file selected...</p>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit-review-btn" class="mt-6 w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700 transition-opacity flex items-center justify-center">
+                                <span class="btn-text">Submit Feedback</span>
+                                <svg class="animate-spin h-5 w-5 text-white hidden btn-spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                            <span class="font-semibold text-lg text-slate-800">What is the turnaround time?</span>
+                            <i class="fas fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p class="p-6 pt-0 text-slate-600">Turnaround time varies by service. Simple tasks like resume and document editing are typically completed within 24-48 hours. Custom projects have a timeline that will be discussed and agreed upon before starting.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                            <span class="font-semibold text-lg text-slate-800">Can I request revisions?</span>
+                            <i class="fas fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p class="p-6 pt-0 text-slate-600">Yes! We want you to be completely satisfied. Most of our services include a set number of revisions. Please check the service details or ask us on WhatsApp for more information.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="faq-toggle w-full flex justify-between items-center text-left p-6">
+                            <span class="font-semibold text-lg text-slate-800">What payment methods do you accept?</span>
+                            <i class="fas fa-chevron-down text-slate-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                            <p class="p-6 pt-0 text-slate-600">We accept payments through all major UPI apps (Google Pay, PhonePe, Paytm, etc.) and direct bank transfers. All details are provided when you click 'Order Now'.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section id="contact" class="bg-indigo-700 text-white">
+            <div class="container mx-auto px-6 py-20 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold">Have Questions or a Custom Project?</h2>
+                 <p class="mt-4 text-indigo-200 max-w-2xl mx-auto">
+                    We're here to help. Click the button below to start a conversation with us directly on WhatsApp.
+                 </p>
+                 <a href="https://wa.me/919573357376?text=Hello!%20I%20have%20a%20question%20about%20your%20services." target="_blank" class="mt-8 inline-block bg-white text-indigo-700 font-bold px-8 py-4 rounded-lg hover:bg-slate-100 transition duration-300 shadow-xl text-lg">
+                    <i class="fab fa-whatsapp mr-2"></i>Chat With Us
+                 </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 SmartStudentGuide. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Your partner in academic and career success.</p>
+        </div>
+    </footer>
+
+    <!-- Sample Viewer Modal -->
+    <div id="sample-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-4xl transform transition-all duration-300 scale-95 opacity-0 relative">
+            <button id="close-sample-btn" class="absolute -top-3 -right-3 bg-white rounded-full h-10 w-10 flex items-center justify-center text-slate-800 shadow-lg z-10 text-2xl leading-none">&times;</button>
+            <div class="relative">
+                <button id="gallery-prev" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center text-slate-800 shadow-md z-10 hidden">&lt;</button>
+                <button id="gallery-next" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center text-slate-800 shadow-md z-10 hidden">&gt;</button>
+                <div class="p-2 sm:p-4">
+                    <h3 id="sample-modal-title" class="text-xl sm:text-2xl font-bold text-slate-900 mb-4 text-center">Sample Title</h3>
+                    <div class="bg-slate-100 rounded-lg p-2">
+                        <img id="sample-modal-image" src="" alt="Work Sample" class="w-full h-auto max-h-[80vh] object-contain rounded-md border hidden">
+                        <video id="sample-modal-video" src="" class="w-full h-auto max-h-[80vh] rounded-md hidden" controls autoplay muted loop></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm transform transition-all duration-300 scale-95 opacity-0">
+            <h2 class="text-xl font-bold text-slate-900 mb-4">Complete Your Payment</h2>
+            <p class="text-slate-600 mb-4 text-sm">Choose a payment method, upload a screenshot, and then click "I Have Paid" to get the WhatsApp number.</p>
+            
+            <!-- Payment Method Selection -->
+            <div class="flex border-b border-slate-200 mb-4">
+                <button id="upi-tab" class="payment-tab flex-1 py-2 text-center text-sm active-tab">UPI</button>
+                <button id="bank-tab" class="payment-tab flex-1 py-2 text-center text-sm text-slate-500">Bank Transfer</button>
+            </div>
+
+            <!-- UPI Details -->
+            <div id="upi-details">
+                <p class="text-center text-slate-600 mb-2 text-sm">Scan the QR code with any UPI app</p>
+                <img src="/images/phonepayqr.jpg" alt="UPI QR Code" class="mx-auto rounded-lg border border-slate-300 w-44 h-44">
+                <p class="text-center my-2 text-slate-500 font-semibold text-sm">OR</p>
+                <p class="text-center text-slate-600 text-sm">Pay to UPI ID:</p>
+                <p class="text-center font-mono bg-slate-100 p-2 rounded-md mt-1 text-sm">veerla.manikanta2@axl</p>
+            </div>
+
+            <!-- Bank Transfer Details -->
+            <div id="bank-details" class="hidden">
+                <div class="space-y-3 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <div>
+                        <p class="text-sm font-medium text-slate-500">Account Name:</p>
+                        <p class="font-semibold text-slate-800">Veerla Manikanta</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-slate-500">Account Number:</p>
+                        <p class="font-semibold text-slate-800">41864196324</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-slate-500">IFSC Code:</p>
+                        <p class="font-semibold text-slate-800">SBIN0006980</p>
+                    </div>
+                     <div>
+                        <p class="text-sm font-medium text-slate-500">Bank Name:</p>
+                        <p class="font-semibold text-slate-800">State Bank of India</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Screenshot Upload -->
+            <div class="mt-4">
+                <label for="screenshot-upload" class="block text-sm font-medium text-slate-700">Upload Payment Screenshot</label>
+                <div class="mt-2 flex justify-center p-4 border-2 border-slate-300 border-dashed rounded-md">
+                    <div class="space-y-1 text-center">
+                        <svg class="mx-auto h-10 w-10 text-slate-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <div class="flex text-sm text-slate-600">
+                            <label for="screenshot-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500">
+                                <span>Upload a file</span>
+                                <input id="screenshot-upload" name="screenshot-upload" type="file" class="sr-only" accept="image/png, image/jpeg, image/jpg">
+                            </label>
+                            <p class="pl-1">or drag and drop</p>
+                        </div>
+                        <p id="file-name" class="text-xs text-slate-500">PNG, JPG, JPEG</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-end space-x-4">
+                <button id="cancel-btn" class="px-4 py-2 bg-slate-200 text-slate-800 rounded-lg hover:bg-slate-300">Cancel</button>
+                <button id="pay-btn" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 shadow-md transition-opacity flex items-center justify-center">
+                    <span class="btn-text">I Have Paid</span>
+                    <svg class="animate-spin h-5 w-5 text-white hidden btn-spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+   <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm text-center transform transition-all duration-300 scale-95 opacity-0">
+            <div class="text-green-500 mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-green-100 mb-4">
+                <i class="fas fa-check text-3xl"></i>
+            </div>
+            <h2 class="text-xl font-bold text-slate-900 mb-2">Payment Successful!</h2>
+            <p class="text-slate-600 mb-4">Thank you! Click the number below to send your payment screenshot and requirements to us on WhatsApp.</p>
+
+            <div class="bg-slate-100 p-4 rounded-lg border border-slate-200">
+                <p class="text-slate-600 text-sm">Our WhatsApp Number:</p>
+                <div class="flex items-center justify-center space-x-4 mt-2">
+                    <a style="text-align: center;" id="whatsapp-number" href="https://wa.me/919573357376?text=Hello!%20I've%20just%20completed%20a%20payment%20for%20your%20service." target="_blank" class="text-xl font-bold text-indigo-600 tracking-wider hover:underline">
+                        +91 9573357376
+                    </a>
+                    <button id="copy-btn" class="text-slate-500 hover:text-indigo-600" title="Copy to clipboard">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                    <span id="copy-feedback" class="text-sm text-green-600 font-semibold opacity-0 transition-opacity">Copied!</span>
+                </div>
+            </div>
+            <button id="close-success-btn" class="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700">Close</button>
+        </div>
+    </div>
+
+    <!-- Failed Modal -->
+    <div id="failed-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm text-center transform transition-all duration-300 scale-95 opacity-0">
+            <div class="text-red-500 mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-red-100 mb-4">
+                <i class="fas fa-times text-3xl"></i>
+            </div>
+            <h2 class="text-xl font-bold text-slate-900 mb-2">Payment Verification Failed</h2>
+            <p class="text-slate-600 mb-4">We couldn't confirm your payment. Please ensure you have uploaded the correct screenshot and try again.</p>
+            <button id="try-again-btn" class="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
